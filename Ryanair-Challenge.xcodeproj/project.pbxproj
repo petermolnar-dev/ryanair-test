@@ -13,6 +13,8 @@
 		C73DF60124EF19790073E4D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73DF60024EF19790073E4D5 /* Assets.xcassets */; };
 		C73DF60424EF19790073E4D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DF60224EF19790073E4D5 /* LaunchScreen.storyboard */; };
 		C73DF60F24EF19790073E4D5 /* Ryanair_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF60E24EF19790073E4D5 /* Ryanair_ChallengeTests.swift */; };
+		C73DF61E24EF1D020073E4D5 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF61D24EF1D020073E4D5 /* Stations.swift */; };
+		C73DF62024EF1DE10073E4D5 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF61F24EF1DE10073E4D5 /* Flights.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C73DF60A24EF19790073E4D5 /* Ryanair-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ryanair-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73DF60E24EF19790073E4D5 /* Ryanair_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ryanair_ChallengeTests.swift; sourceTree = "<group>"; };
 		C73DF61024EF19790073E4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C73DF61D24EF1D020073E4D5 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		C73DF61F24EF1DE10073E4D5 /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 		C73DF61924EF1A530073E4D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C73DF61D24EF1D020073E4D5 /* Stations.swift */,
+				C73DF61F24EF1DE10073E4D5 /* Flights.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73DF5FC24EF19770073E4D5 /* ViewController.swift in Sources */,
+				C73DF62024EF1DE10073E4D5 /* Flights.swift in Sources */,
 				C73DF5F824EF19770073E4D5 /* AppDelegate.swift in Sources */,
+				C73DF61E24EF1D020073E4D5 /* Stations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
