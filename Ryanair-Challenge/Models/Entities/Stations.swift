@@ -8,6 +8,8 @@
 
 import Foundation
 
+// Model entity to store the station list resut from the network query
+
 // MARK: - Stations
 struct Stations: Codable {
     let stations: [Station]

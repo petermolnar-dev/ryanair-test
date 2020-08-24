@@ -8,6 +8,8 @@
 
 import Foundation
 
+// Model entity to store the result of the search networking call
+
 // MARK: - Flights
 struct Flights: Codable {
     let termsOfUse: String

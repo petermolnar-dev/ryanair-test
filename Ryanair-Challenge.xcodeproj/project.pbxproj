@@ -12,10 +12,13 @@
 		C73DF5FF24EF19770073E4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DF5FD24EF19770073E4D5 /* Main.storyboard */; };
 		C73DF60124EF19790073E4D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73DF60024EF19790073E4D5 /* Assets.xcassets */; };
 		C73DF60424EF19790073E4D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DF60224EF19790073E4D5 /* LaunchScreen.storyboard */; };
-		C73DF60F24EF19790073E4D5 /* Ryanair_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF60E24EF19790073E4D5 /* Ryanair_ChallengeTests.swift */; };
 		C73DF61E24EF1D020073E4D5 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF61D24EF1D020073E4D5 /* Stations.swift */; };
 		C73DF62024EF1DE10073E4D5 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF61F24EF1DE10073E4D5 /* Flights.swift */; };
 		C73DF62424EFA91E0073E4D5 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62324EFA91E0073E4D5 /* Parser.swift */; };
+		C73DF62724F45E220073E4D5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62624F45E220073E4D5 /* NetworkService.swift */; };
+		C73DF62924F45E760073E4D5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62824F45E760073E4D5 /* NetworkManager.swift */; };
+		C73DF62C24F460460073E4D5 /* StationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62B24F460460073E4D5 /* StationStorage.swift */; };
+		C73DF62E24F460C50073E4D5 /* StationStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62D24F460C50073E4D5 /* StationStorageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +40,14 @@
 		C73DF60324EF19790073E4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C73DF60524EF19790073E4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C73DF60A24EF19790073E4D5 /* Ryanair-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ryanair-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73DF60E24EF19790073E4D5 /* Ryanair_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ryanair_ChallengeTests.swift; sourceTree = "<group>"; };
 		C73DF61024EF19790073E4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C73DF61D24EF1D020073E4D5 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 		C73DF61F24EF1DE10073E4D5 /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
 		C73DF62324EFA91E0073E4D5 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		C73DF62624F45E220073E4D5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C73DF62824F45E760073E4D5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C73DF62B24F460460073E4D5 /* StationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationStorage.swift; sourceTree = "<group>"; };
+		C73DF62D24F460C50073E4D5 /* StationStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,8 @@
 		C73DF60D24EF19790073E4D5 /* Ryanair-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C73DF60E24EF19790073E4D5 /* Ryanair_ChallengeTests.swift */,
 				C73DF61024EF19790073E4D5 /* Info.plist */,
+				C73DF62D24F460C50073E4D5 /* StationStorageTests.swift */,
 			);
 			path = "Ryanair-ChallengeTests";
 			sourceTree = "<group>";
@@ -104,6 +110,8 @@
 		C73DF61924EF1A530073E4D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C73DF62A24F460330073E4D5 /* Storage */,
+				C73DF62524F45E090073E4D5 /* Networking */,
 				C73DF62224EFA90F0073E4D5 /* Parser */,
 				C73DF62124EFA9000073E4D5 /* Entities */,
 			);
@@ -151,6 +159,23 @@
 				C73DF62324EFA91E0073E4D5 /* Parser.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		C73DF62524F45E090073E4D5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C73DF62624F45E220073E4D5 /* NetworkService.swift */,
+				C73DF62824F45E760073E4D5 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C73DF62A24F460330073E4D5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C73DF62B24F460460073E4D5 /* StationStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +282,10 @@
 				C73DF5FC24EF19770073E4D5 /* ViewController.swift in Sources */,
 				C73DF62024EF1DE10073E4D5 /* Flights.swift in Sources */,
 				C73DF62424EFA91E0073E4D5 /* Parser.swift in Sources */,
+				C73DF62924F45E760073E4D5 /* NetworkManager.swift in Sources */,
 				C73DF5F824EF19770073E4D5 /* AppDelegate.swift in Sources */,
+				C73DF62724F45E220073E4D5 /* NetworkService.swift in Sources */,
+				C73DF62C24F460460073E4D5 /* StationStorage.swift in Sources */,
 				C73DF61E24EF1D020073E4D5 /* Stations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73DF60F24EF19790073E4D5 /* Ryanair_ChallengeTests.swift in Sources */,
+				C73DF62E24F460C50073E4D5 /* StationStorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
