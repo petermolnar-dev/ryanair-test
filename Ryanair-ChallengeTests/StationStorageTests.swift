@@ -9,27 +9,55 @@
 import XCTest
 @testable import Ryanair_Challenge
 
-public struct StationStorage {
-    private let stations: Stations
-    
-    init(stations: Stations) {
-        self.stations = stations
-    }
-    
-    public func availableStations(for base: String) -> [String] {
-        return []
-    }
-    
-}
 
 class StationStorageTests: XCTestCase {
-    func testAvailabeStations() {
-//        let stations = Stations()
-//        let sut = StationStorage(stations: stations)
-//        
-//        XCTAssert(<#T##expression: Bool##Bool#>, <#T##message: String##String#>)
+    
+    func testParsingOneStation() {
+        let sut: Station?
+        sut = jsonAtPath(pathName: "station")
+        
+        XCTAssertNotNil(sut)
+        XCTAssert(sut?.code == "AAL")
+    }
+    
+    func testPArsingAllStations() {
+        let sut: StationsContainer?
+        sut = jsonAtPath(pathName: "stations")
+        
+        XCTAssertNotNil(sut)
+        XCTAssert(sut?.stations.count == 320)
 
     }
-
+    
+    func testAvailableStatins() {
+        
+        let stations: StationsContainer?
+        stations = jsonAtPath(pathName: "stations")
+        
+        guard let stationsForStorage = stations else {
+            XCTFail()
+            return
+        }
+        
+        let sut = StationStorage(stations: stationsForStorage)
+        let markets = sut.availableStations(for: "AAR")
+        XCTAssert(markets.count == 4)
+    }
+    
+    // Helper
+    func jsonAtPath<Parsable: Decodable>(pathName: String) -> Parsable? {
+        let bundle = Bundle(for: type(of: self))
+        if let path = bundle.path(forResource: pathName, ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                if let parsedModel = Parser().parse(with: data, type: Parsable.self) {
+                    return parsedModel as? Parsable
+                }
+            } catch {
+                return nil
+            }
+        }
+        return nil
+    }
 
 }
