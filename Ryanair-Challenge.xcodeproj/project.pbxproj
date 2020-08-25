@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		33BA1B6024F54F1C005051AA /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BA1B5F24F54F1C005051AA /* stations.json */; };
 		33BA1B6224F550DA005051AA /* station.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BA1B6124F550DA005051AA /* station.json */; };
+		33BA1B6424F5A126005051AA /* SearchFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA1B6324F5A126005051AA /* SearchFormController.swift */; };
 		C73DF5F824EF19770073E4D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF5F724EF19770073E4D5 /* AppDelegate.swift */; };
-		C73DF5FC24EF19770073E4D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF5FB24EF19770073E4D5 /* ViewController.swift */; };
 		C73DF5FF24EF19770073E4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DF5FD24EF19770073E4D5 /* Main.storyboard */; };
 		C73DF60124EF19790073E4D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73DF60024EF19790073E4D5 /* Assets.xcassets */; };
 		C73DF60424EF19790073E4D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DF60224EF19790073E4D5 /* LaunchScreen.storyboard */; };
@@ -36,9 +36,9 @@
 /* Begin PBXFileReference section */
 		33BA1B5F24F54F1C005051AA /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		33BA1B6124F550DA005051AA /* station.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = station.json; sourceTree = "<group>"; };
+		33BA1B6324F5A126005051AA /* SearchFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormController.swift; sourceTree = "<group>"; };
 		C73DF5F424EF19770073E4D5 /* Ryanair-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ryanair-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73DF5F724EF19770073E4D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C73DF5FB24EF19770073E4D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C73DF5FE24EF19770073E4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C73DF60024EF19790073E4D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73DF60324EF19790073E4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		C73DF61A24EF1A590073E4D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C73DF5FB24EF19770073E4D5 /* ViewController.swift */,
+				33BA1B6324F5A126005051AA /* SearchFormController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,10 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73DF5FC24EF19770073E4D5 /* ViewController.swift in Sources */,
 				C73DF62024EF1DE10073E4D5 /* Flights.swift in Sources */,
 				C73DF62424EFA91E0073E4D5 /* Parser.swift in Sources */,
 				C73DF62924F45E760073E4D5 /* NetworkManager.swift in Sources */,
+				33BA1B6424F5A126005051AA /* SearchFormController.swift in Sources */,
 				C73DF5F824EF19770073E4D5 /* AppDelegate.swift in Sources */,
 				C73DF62724F45E220073E4D5 /* NetworkService.swift in Sources */,
 				C73DF62C24F460460073E4D5 /* StationStorage.swift in Sources */,
