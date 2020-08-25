@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3328481F24F5BDF700BDECC8 /* String+DateComponentFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328481E24F5BDF700BDECC8 /* String+DateComponentFromString.swift */; };
 		33BA1B6024F54F1C005051AA /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BA1B5F24F54F1C005051AA /* stations.json */; };
 		33BA1B6224F550DA005051AA /* station.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BA1B6124F550DA005051AA /* station.json */; };
 		33BA1B6424F5A126005051AA /* SearchFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA1B6324F5A126005051AA /* SearchFormController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3328481E24F5BDF700BDECC8 /* String+DateComponentFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateComponentFromString.swift"; sourceTree = "<group>"; };
 		33BA1B5F24F54F1C005051AA /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		33BA1B6124F550DA005051AA /* station.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = station.json; sourceTree = "<group>"; };
 		33BA1B6324F5A126005051AA /* SearchFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				33BA1B6624F5A8F3005051AA /* UIActivityIndicatorView+CenteredLoading.swift */,
 				33BA1B6C24F5B31E005051AA /* URL+Parameters.swift */,
+				3328481E24F5BDF700BDECC8 /* String+DateComponentFromString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				33BA1B6424F5A126005051AA /* SearchFormController.swift in Sources */,
 				C73DF5F824EF19770073E4D5 /* AppDelegate.swift in Sources */,
 				C73DF62724F45E220073E4D5 /* NetworkService.swift in Sources */,
+				3328481F24F5BDF700BDECC8 /* String+DateComponentFromString.swift in Sources */,
 				33BA1B6924F5AAC7005051AA /* ResultsViewController.swift in Sources */,
 				C73DF62C24F460460073E4D5 /* StationStorage.swift in Sources */,
 				C73DF61E24EF1D020073E4D5 /* Stations.swift in Sources */,
