@@ -13,8 +13,6 @@
 		333329CA24F9B59C00F7BB40 /* UIActivityIndicatorView+CenteredLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333329C924F9B59C00F7BB40 /* UIActivityIndicatorView+CenteredLoading.swift */; };
 		333329CC24F9B5A600F7BB40 /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333329CB24F9B5A600F7BB40 /* UITextField+PickerView.swift */; };
 		333329CE24F9B5BC00F7BB40 /* SearchFormController+PickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333329CD24F9B5BC00F7BB40 /* SearchFormController+PickerViewDelegate.swift */; };
-		33BA1B6024F54F1C005051AA /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BA1B5F24F54F1C005051AA /* stations.json */; };
-		33BA1B6224F550DA005051AA /* station.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BA1B6124F550DA005051AA /* station.json */; };
 		33BA1B6424F5A126005051AA /* SearchFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA1B6324F5A126005051AA /* SearchFormController.swift */; };
 		33BA1B6924F5AAC7005051AA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA1B6824F5AAC7005051AA /* ResultsViewController.swift */; };
 		33BA1B6B24F5AE54005051AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA1B6A24F5AE54005051AA /* Constants.swift */; };
@@ -30,18 +28,7 @@
 		C73DF62724F45E220073E4D5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62624F45E220073E4D5 /* NetworkService.swift */; };
 		C73DF62924F45E760073E4D5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62824F45E760073E4D5 /* NetworkManager.swift */; };
 		C73DF62C24F460460073E4D5 /* StationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62B24F460460073E4D5 /* StationStorage.swift */; };
-		C73DF62E24F460C50073E4D5 /* StationStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF62D24F460C50073E4D5 /* StationStorageTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C73DF60B24EF19790073E4D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C73DF5EC24EF19770073E4D5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C73DF5F324EF19770073E4D5;
-			remoteInfo = "Ryanair-Challenge";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3328481E24F5BDF700BDECC8 /* String+DateComponentFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateComponentFromString.swift"; sourceTree = "<group>"; };
@@ -50,8 +37,6 @@
 		333329C924F9B59C00F7BB40 /* UIActivityIndicatorView+CenteredLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+CenteredLoading.swift"; sourceTree = "<group>"; };
 		333329CB24F9B5A600F7BB40 /* UITextField+PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		333329CD24F9B5BC00F7BB40 /* SearchFormController+PickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchFormController+PickerViewDelegate.swift"; sourceTree = "<group>"; };
-		33BA1B5F24F54F1C005051AA /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
-		33BA1B6124F550DA005051AA /* station.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = station.json; sourceTree = "<group>"; };
 		33BA1B6324F5A126005051AA /* SearchFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormController.swift; sourceTree = "<group>"; };
 		33BA1B6824F5AAC7005051AA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		33BA1B6A24F5AE54005051AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -63,15 +48,12 @@
 		C73DF60024EF19790073E4D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73DF60324EF19790073E4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C73DF60524EF19790073E4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C73DF60A24EF19790073E4D5 /* Ryanair-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ryanair-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73DF61024EF19790073E4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C73DF61D24EF1D020073E4D5 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 		C73DF61F24EF1DE10073E4D5 /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
 		C73DF62324EFA91E0073E4D5 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		C73DF62624F45E220073E4D5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C73DF62824F45E760073E4D5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C73DF62B24F460460073E4D5 /* StationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationStorage.swift; sourceTree = "<group>"; };
-		C73DF62D24F460C50073E4D5 /* StationStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,25 +64,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73DF60724EF19790073E4D5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33BA1B5E24F54EAD005051AA /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				33BA1B6124F550DA005051AA /* station.json */,
-				33BA1B5F24F54F1C005051AA /* stations.json */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		33BA1B6524F5A8C1005051AA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				C73DF5F624EF19770073E4D5 /* Ryanair-Challenge */,
-				C73DF60D24EF19790073E4D5 /* Ryanair-ChallengeTests */,
 				C73DF5F524EF19770073E4D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				C73DF5F424EF19770073E4D5 /* Ryanair-Challenge.app */,
-				C73DF60A24EF19790073E4D5 /* Ryanair-ChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,16 +106,6 @@
 				C73DF60524EF19790073E4D5 /* Info.plist */,
 			);
 			path = "Ryanair-Challenge";
-			sourceTree = "<group>";
-		};
-		C73DF60D24EF19790073E4D5 /* Ryanair-ChallengeTests */ = {
-			isa = PBXGroup;
-			children = (
-				33BA1B5E24F54EAD005051AA /* JSON */,
-				C73DF61024EF19790073E4D5 /* Info.plist */,
-				C73DF62D24F460C50073E4D5 /* StationStorageTests.swift */,
-			);
-			path = "Ryanair-ChallengeTests";
 			sourceTree = "<group>";
 		};
 		C73DF61924EF1A530073E4D5 /* Models */ = {
@@ -250,24 +204,6 @@
 			productReference = C73DF5F424EF19770073E4D5 /* Ryanair-Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C73DF60924EF19790073E4D5 /* Ryanair-ChallengeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C73DF61624EF19790073E4D5 /* Build configuration list for PBXNativeTarget "Ryanair-ChallengeTests" */;
-			buildPhases = (
-				C73DF60624EF19790073E4D5 /* Sources */,
-				C73DF60724EF19790073E4D5 /* Frameworks */,
-				C73DF60824EF19790073E4D5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C73DF60C24EF19790073E4D5 /* PBXTargetDependency */,
-			);
-			name = "Ryanair-ChallengeTests";
-			productName = "Ryanair-ChallengeTests";
-			productReference = C73DF60A24EF19790073E4D5 /* Ryanair-ChallengeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,10 +216,6 @@
 				TargetAttributes = {
 					C73DF5F324EF19770073E4D5 = {
 						CreatedOnToolsVersion = 11.6;
-					};
-					C73DF60924EF19790073E4D5 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = C73DF5F324EF19770073E4D5;
 					};
 				};
 			};
@@ -301,7 +233,6 @@
 			projectRoot = "";
 			targets = (
 				C73DF5F324EF19770073E4D5 /* Ryanair-Challenge */,
-				C73DF60924EF19790073E4D5 /* Ryanair-ChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,15 +245,6 @@
 				C73DF60424EF19790073E4D5 /* LaunchScreen.storyboard in Resources */,
 				C73DF60124EF19790073E4D5 /* Assets.xcassets in Resources */,
 				C73DF5FF24EF19770073E4D5 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C73DF60824EF19790073E4D5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33BA1B6224F550DA005051AA /* station.json in Resources */,
-				33BA1B6024F54F1C005051AA /* stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,23 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73DF60624EF19790073E4D5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C73DF62E24F460C50073E4D5 /* StationStorageTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C73DF60C24EF19790073E4D5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C73DF5F324EF19770073E4D5 /* Ryanair-Challenge */;
-			targetProxy = C73DF60B24EF19790073E4D5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C73DF5FD24EF19770073E4D5 /* Main.storyboard */ = {
@@ -542,50 +448,6 @@
 			};
 			name = Release;
 		};
-		C73DF61724EF19790073E4D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4TLW686CNM;
-				INFOPLIST_FILE = "Ryanair-ChallengeTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.Ryanair-ChallengeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ryanair-Challenge.app/Ryanair-Challenge";
-			};
-			name = Debug;
-		};
-		C73DF61824EF19790073E4D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4TLW686CNM;
-				INFOPLIST_FILE = "Ryanair-ChallengeTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.Ryanair-ChallengeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ryanair-Challenge.app/Ryanair-Challenge";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -603,15 +465,6 @@
 			buildConfigurations = (
 				C73DF61424EF19790073E4D5 /* Debug */,
 				C73DF61524EF19790073E4D5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C73DF61624EF19790073E4D5 /* Build configuration list for PBXNativeTarget "Ryanair-ChallengeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C73DF61724EF19790073E4D5 /* Debug */,
-				C73DF61824EF19790073E4D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

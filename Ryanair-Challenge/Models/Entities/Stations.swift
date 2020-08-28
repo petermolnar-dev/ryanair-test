@@ -16,7 +16,7 @@ struct StationsContainer: Codable {
 }
 
 // MARK: - Station
-struct Station: Codable {
+public struct Station: Codable {
     let code, name: String
     let alternateName: String?
     let alias: [String]
@@ -104,15 +104,3 @@ class JSONNull: Codable, Hashable {
     }
 }
 
-extension Station: Hashable {
-    
-    // Conforming to HAshable protocol
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(code)
-    }
-    
-    // Conforming to Equitable protocol
-    static func == (lhs: Station, rhs: Station) -> Bool {
-        lhs.code == rhs.code
-    }
-}

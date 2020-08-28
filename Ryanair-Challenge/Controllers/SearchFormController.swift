@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class SearchFormController: UIViewController {
     @IBOutlet var origin: UITextField!
     @IBOutlet var destination: UITextField!
@@ -22,17 +21,31 @@ class SearchFormController: UIViewController {
     var childPicker = UIPickerView()
     var teenPicker = UIPickerView()
     
+    var originPicker = UIPickerView()
+    var destinationPicker = UIPickerView()
+    
+    let loadingIndicator = UIActivityIndicatorView()
+    
     let dateFormatter = DateFormatter()
+    
+    let stationStorage = StationStorage()
     
     // MARK: Viewcontroller lifecycle
     override func viewDidLoad() {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         setupPickers()
         setupDefaultValues()
+        setupStorage()
     }
     
     func setupPickers() {
-        self.departureDate.setInputViewDatePicker(target: self, selector: #selector(dateSelected))
+        originPicker.delegate = self
+        originPicker.dataSource = self
+        self.origin.setPickerInputView(picker: originPicker)
+        
+        destinationPicker.delegate = self
+        destinationPicker.dataSource = self
+        self.destination.setPickerInputView(picker: destinationPicker)
         
         adultPicker.dataSource = self
         adultPicker.delegate = self
@@ -45,6 +58,8 @@ class SearchFormController: UIViewController {
         childPicker.dataSource = self
         childPicker.delegate = self
         self.childCnt.setPickerInputView(picker: childPicker)
+        
+        self.departureDate.setInputViewDatePicker(target: self, selector: #selector(dateSelected))
     }
     
     func setupDefaultValues() {
@@ -53,7 +68,13 @@ class SearchFormController: UIViewController {
         self.adultsCnt.text = "1"
         self.teenCnt.text = "0"
         self.childCnt.text = "0"
-
+        
+    }
+    
+    func setupStorage() {
+        self.stationStorage.fetchStationList(from: stationsURLAsString) {
+            print("Completed")
+        }
     }
     
     // MARK: DatePicker selector
@@ -78,7 +99,7 @@ class SearchFormController: UIViewController {
     // Creating a dictionary from the form input, and preparing to the search query
     func makeFormParameters() -> [String: String] {
         var parameterList = [String: String]()
-         
+        
         parameterList[queryOrigin] = self.origin.text ?? ""
         parameterList[queryDestination] = self.destination.text ?? ""
         parameterList[queryDateOut] = self.departureDate.text ?? ""
@@ -89,4 +110,16 @@ class SearchFormController: UIViewController {
         
         return parameterList
     }
+    
+    // MARK: UI Helpers
+       private func showActivityIndicator() {
+        self.mainSearchStackView.isHidden = true
+           loadingIndicator.startAnimating();
+           self.view.addSubview(loadingIndicator)
+       }
+       
+       private func hideActivityIndicator() {
+           loadingIndicator.removeFromSuperview()
+           self.mainSearchStackView.isHidden = false
+       }
 }

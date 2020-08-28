@@ -22,6 +22,10 @@ extension SearchFormController: UIPickerViewDataSource, UIPickerViewDelegate {
             return maxPeopleCount
         case childPicker, teenPicker:
             return maxPeopleCount + 1
+        case originPicker:
+            return self.stationStorage.stationList().count
+        case destinationPicker:
+            return self.stationStorage.availableStations(for: self.origin.text ?? "").count
         default:
             return 0
         }
@@ -31,6 +35,11 @@ extension SearchFormController: UIPickerViewDataSource, UIPickerViewDelegate {
         switch pickerView {
         case childPicker, teenPicker, adultPicker:
             return String(row)
+        case originPicker:
+            return stationStorage.station(at: row).code + " " + stationStorage.station(at: row).name
+        case destinationPicker:
+            let destinationStation = self.stationStorage.availableStations(for: self.origin.text ?? "")[row]
+            return destinationStation.code + " " + destinationStation.name
         default:
             return ""
         }
@@ -44,6 +53,10 @@ extension SearchFormController: UIPickerViewDataSource, UIPickerViewDelegate {
             self.teenCnt.text = String(row)
         case adultPicker:
             self.adultsCnt.text = String(row + 1)
+        case originPicker:
+            self.origin.text = stationStorage.station(at: row).code
+        case destinationPicker:
+            self.destination.text = self.stationStorage.availableStations(for: self.origin.text ?? "")[row].code
         default:
             return
         }

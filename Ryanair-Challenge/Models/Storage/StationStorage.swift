@@ -8,14 +8,11 @@
 
 import Foundation
 
-public struct StationStorage {
-    private let stations: Set<Station>
+public final class StationStorage {
+    private var stations = [Station]()
+    private let networkManager = NetworkManager()
     
-    init(stations: StationsContainer) {
-        self.stations = Set(stations.stations)
-    }
-    
-    public func availableStations(for base: String) -> [String] {
+    public func availableStations(for base: String) -> [Station] {
         
         guard let baseStation = self.stations.filter({ (station) -> Bool in
             return station.code == base.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -24,9 +21,35 @@ public struct StationStorage {
             return []
         }
         
-        let marketList = baseStation.markets.compactMap { $0.code }
+        let marketList = Set(baseStation.markets.compactMap { $0.code })
+        let availableStations = stations.filter { (station) -> Bool in
+            return marketList.contains(station.code)
+        }
         
-        return marketList
+        return availableStations
+    }
+    
+    public func stationList() -> [String] {
+        return self.stations.compactMap { $0.code }.sorted()
+    }
+    
+    public func station(at index: Int) -> Station {
+        return stations[index]
+    }
+    
+    public func fetchStationList(from URLString: String, completion: @escaping () -> Void) {
+        if let url = URL(string: URLString) {
+            self.networkManager.loadData(with: url, parserType: StationsContainer.self) { result in
+                switch result {
+                case.success(let stationCantainer):
+                    self.stations = stationCantainer.stations
+                case .failure(let error):
+                    print("Error during the statin list fetching: \(error)")
+                }
+                completion()
+            }
+        }
+        
     }
     
 }
