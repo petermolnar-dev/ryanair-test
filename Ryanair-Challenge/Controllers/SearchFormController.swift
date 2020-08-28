@@ -17,6 +17,21 @@ class SearchFormController: UIViewController {
     @IBOutlet var departureDate: UITextField!
     @IBOutlet var mainSearchStackView: UIStackView!
     
+    // MARK: Viewcontroller lifecycle
+    override func viewDidLoad() {
+        self.departureDate.setInputViewDatePicker(target: self, selector: #selector(dateSelected))
+    }
+    
+    // MARK: DatePicker selector
+    @objc func dateSelected() {
+        if let datePicker = self.departureDate.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            self.departureDate.text = dateFormatter.string(from: datePicker.date)
+        }
+        self.departureDate.resignFirstResponder()
+    }
+    
     // MARK: Segue preparation
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startSearch" {
@@ -26,6 +41,9 @@ class SearchFormController: UIViewController {
         }
     }
     
+    // MARK: Helper functions
+    
+    // Crating a dictionary from the form input, and preparing to the search query
     func makeFormParameters() -> [String: String] {
         var parameterList = [String: String]()
          
