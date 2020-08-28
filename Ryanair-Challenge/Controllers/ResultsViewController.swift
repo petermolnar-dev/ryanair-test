@@ -12,13 +12,15 @@ import UIKit
 class ResultsViewController: UIViewController {
     @IBOutlet var resultsTableView: UITableView!
     public var queryParameters = [String : String]()
-    let networkManager = NetworkManager()
     
+    private let networkManager = NetworkManager()
     private let loadingIndicator = UIActivityIndicatorView()
+    internal var flights: Flights?
     
+    
+    // MARK: ViewController Lifecycle
     override func viewDidLoad() {
-        
-        
+        setupUI()
         if let url = URL(string: searchURLAsString),
             let queryUrl = url.append(queries: self.queryParameters) {
             self.showActivityIndicator()
@@ -26,9 +28,10 @@ class ResultsViewController: UIViewController {
                 self?.hideActivityIndicator()
                 switch result {
                 case .success(let data):
-                    // TODO: Process the data and display it on the tableview
-                    // TODO: Show a view when the data is empty
-                    print(data)
+                    self?.flights = data
+                    DispatchQueue.main.async {
+                        self?.resultsTableView.reloadData()
+                    }
                     
                 case .failure(let error):
                     print("Error happened: \(error)")
@@ -36,6 +39,13 @@ class ResultsViewController: UIViewController {
             }
         }
         
+    }
+    
+    // MARK setting up the UI
+    private func setupUI() {
+        self.resultsTableView.rowHeight = 120;
+        self.resultsTableView.dataSource = self
+        self.loadingIndicator.centeredLoading(for: self.view)
     }
     
     // MARK: Helpers

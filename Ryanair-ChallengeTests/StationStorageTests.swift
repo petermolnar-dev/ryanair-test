@@ -20,7 +20,7 @@ class StationStorageTests: XCTestCase {
         XCTAssert(sut?.code == "AAL")
     }
     
-    func testPArsingAllStations() {
+    func testParsingAllStations() {
         let sut: StationsContainer?
         sut = jsonAtPath(pathName: "stations")
         
@@ -29,7 +29,7 @@ class StationStorageTests: XCTestCase {
 
     }
     
-    func testAvailableStatins() {
+    func testAvailableStations() {
         
         let stations: StationsContainer?
         stations = jsonAtPath(pathName: "stations")

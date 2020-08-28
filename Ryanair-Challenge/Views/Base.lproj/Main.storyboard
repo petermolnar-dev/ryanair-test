@@ -26,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-Px-oog">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Code of origin station, like LTN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-Px-oog">
                                         <rect key="frame" x="0.0" y="24.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
@@ -37,7 +37,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCf-gx-gPW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Code of origin station, like LTN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCf-gx-gPW">
                                         <rect key="frame" x="0.0" y="87" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
@@ -48,7 +48,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuZ-6A-yU4">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of adults, between 1 and 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuZ-6A-yU4">
                                         <rect key="frame" x="0.0" y="149.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
@@ -59,7 +59,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GnR-cQ-Cry">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of teens, between 0 and 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GnR-cQ-Cry">
                                         <rect key="frame" x="0.0" y="212" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
@@ -70,7 +70,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seC-cT-AEG">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of children, between 0 and 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seC-cT-AEG">
                                         <rect key="frame" x="0.0" y="274.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
@@ -81,7 +81,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2V-LK-cjS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Format: 2020-09-01" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2V-LK-cjS">
                                         <rect key="frame" x="0.0" y="337" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -164,6 +164,52 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zvx-xE-azP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightCell" rowHeight="130" id="SJb-m5-eTq" customClass="FlightCell" customModule="Ryanair_Challenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJb-m5-eTq" id="oVg-yF-7GW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlightNr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtg-EP-mRc">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="33.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlightDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjq-SO-pdt">
+                                                    <rect key="frame" x="20" y="41.5" width="374" height="27"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOr-lK-dyb">
+                                                    <rect key="frame" x="20" y="76.5" width="374" height="33"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VOr-lK-dyb" firstAttribute="top" secondItem="Bjq-SO-pdt" secondAttribute="bottom" constant="8" id="5EA-71-sKZ"/>
+                                                <constraint firstItem="Wtg-EP-mRc" firstAttribute="top" secondItem="oVg-yF-7GW" secondAttribute="top" id="EVL-gm-37c"/>
+                                                <constraint firstItem="Wtg-EP-mRc" firstAttribute="leading" secondItem="oVg-yF-7GW" secondAttribute="leading" constant="20" id="FS1-Uv-tux"/>
+                                                <constraint firstItem="Bjq-SO-pdt" firstAttribute="leading" secondItem="Wtg-EP-mRc" secondAttribute="leading" id="GJC-gT-KMt"/>
+                                                <constraint firstItem="Bjq-SO-pdt" firstAttribute="top" secondItem="Wtg-EP-mRc" secondAttribute="bottom" constant="8" id="MYW-LV-fAU"/>
+                                                <constraint firstItem="VOr-lK-dyb" firstAttribute="leading" secondItem="oVg-yF-7GW" secondAttribute="leadingMargin" id="TOk-X5-iSc"/>
+                                                <constraint firstItem="Bjq-SO-pdt" firstAttribute="trailing" secondItem="oVg-yF-7GW" secondAttribute="trailingMargin" id="c0t-bS-V6q"/>
+                                                <constraint firstItem="VOr-lK-dyb" firstAttribute="trailing" secondItem="oVg-yF-7GW" secondAttribute="trailingMargin" id="hDm-9I-g2I"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wtg-EP-mRc" secondAttribute="trailing" constant="20" id="vjK-G3-QvV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="flightNumber" destination="Wtg-EP-mRc" id="vct-vo-OdA"/>
+                                            <outlet property="outDate" destination="Bjq-SO-pdt" id="EJp-Ze-50q"/>
+                                            <outlet property="regularFareSummed" destination="VOr-lK-dyb" id="gM2-pq-ODj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

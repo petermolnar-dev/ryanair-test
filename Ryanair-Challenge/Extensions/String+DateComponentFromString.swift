@@ -10,23 +10,19 @@ import Foundation
 
 public extension String {
     
-    func dateComponentFromString() -> DateComponents? {
+    func dateTranslationTo(locale: Locale = Locale.current) -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        
-        let calendar = Calendar.current
-        
-        if let date = dateFormatter.date(from: self) {
-            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-            return components
-        } else {
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            if let date = dateFormatter.date(from: self) {
-                let components = calendar.dateComponents([.year, .month, .day], from: date)
-                return components
-            }
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+                
+        guard let date = dateFormatter.date(from: self) else {
             return nil
         }
+        dateFormatter.locale =  locale
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        let comvertedValue = dateFormatter.string(from: date)
+        return comvertedValue
     }
 }

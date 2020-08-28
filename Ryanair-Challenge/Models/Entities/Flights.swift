@@ -11,7 +11,7 @@ import Foundation
 // Model entity to store the result of the search networking call
 
 // MARK: - Flights
-struct Flights: Codable {
+public struct Flights: Codable {
     let termsOfUse: String
     let currency: String
     let currPrecision: Int
@@ -21,20 +21,20 @@ struct Flights: Codable {
 }
 
 // MARK: - Trip
-struct Trip: Codable {
+public struct Trip: Codable {
     let origin, originName, destination, destinationName: String
     let routeGroup, tripType, upgradeType: String
     let dates: [DateElement]
 }
 
 // MARK: - DateElement
-struct DateElement: Codable {
+public struct DateElement: Codable {
     let dateOut: String
     let flights: [Flight]
 }
 
 // MARK: - Flight
-struct Flight: Codable {
+public struct Flight: Codable {
     let faresLeft: Int
     let flightKey: String
     let infantsLeft: Int
@@ -47,13 +47,13 @@ struct Flight: Codable {
 }
 
 // MARK: - RegularFare
-struct RegularFare: Codable {
+public struct RegularFare: Codable {
     let fareKey, fareClass: String
     let fares: [Fare]
 }
 
 // MARK: - Fare
-struct Fare: Codable {
+public struct Fare: Codable {
     let type: TypeEnum
     let amount: Double
     let count: Int
@@ -66,21 +66,21 @@ struct Fare: Codable {
 }
 
 // MARK: - MandatorySeatFee
-struct MandatorySeatFee: Codable {
+public struct MandatorySeatFee: Codable {
     let vat, amt, total, totalDiscount: Int
     let totalWithoutDiscount: Int
     let discountType, code: String
     let qty: Int
 }
 
-enum TypeEnum: String, Codable {
+public enum TypeEnum: String, Codable {
     case adt = "ADT"
     case chd = "CHD"
     case teen = "TEEN"
 }
 
 // MARK: - Segment
-struct Segment: Codable {
+public struct Segment: Codable {
     let segmentNr: Int
     let origin, destination, flightNumber: String
     let time, timeUTC: [String]
