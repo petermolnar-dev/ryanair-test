@@ -2,7 +2,7 @@
 //  ResultsViewController+TableView.swift
 //  Ryanair-Challenge
 //
-//  Created by Peter Molnar  on 26/08/2020.
+//  Created by Peter Molnar on 26/08/2020.
 //  Copyright © 2020 Peter Molnar. All rights reserved.
 //
 

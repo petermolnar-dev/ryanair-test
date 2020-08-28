@@ -2,7 +2,7 @@
 //  SearchFormController+PickerViewDelegate.swift
 //  Ryanair-Challenge
 //
-//  Created by Molnar, Peter, Vodafone Malta on 28/08/2020.
+//  Created by Peter Molnar on 28/08/2020.
 //  Copyright © 2020 Peter Molnar. All rights reserved.
 //
 
