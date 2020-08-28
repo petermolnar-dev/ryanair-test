@@ -38,13 +38,16 @@ extension SearchFormController: UIPickerViewDataSource, UIPickerViewDelegate {
         case originPicker:
             return stationStorage.station(at: row).code + " " + stationStorage.station(at: row).name
         case destinationPicker:
-            let destinationStation = self.stationStorage.availableStations(for: self.origin.text ?? "")[row]
-            return destinationStation.code + " " + destinationStation.name
+            if self.stationStorage.availableStations(for: self.origin.text ?? "").count > 0 {
+                let destinationStation = self.stationStorage.availableStations(for: self.origin.text ?? "")[row]
+                return destinationStation.code + " " + destinationStation.name
+            }
+            return ""
         default:
             return ""
         }
     }
-    
+        
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case childPicker:
@@ -56,7 +59,9 @@ extension SearchFormController: UIPickerViewDataSource, UIPickerViewDelegate {
         case originPicker:
             self.origin.text = stationStorage.station(at: row).code
         case destinationPicker:
-            self.destination.text = self.stationStorage.availableStations(for: self.origin.text ?? "")[row].code
+            if self.stationStorage.availableStations(for: self.origin.text ?? "").count > 0 {
+                self.destination.text = self.stationStorage.availableStations(for: self.origin.text ?? "")[row].code
+            }
         default:
             return
         }
