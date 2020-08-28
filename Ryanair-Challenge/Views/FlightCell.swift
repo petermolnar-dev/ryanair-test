@@ -2,7 +2,7 @@
 //  FlightCell.swift
 //  Ryanair-Challenge
 //
-//  Created by Molnar, Peter, Vodafone Malta on 26/08/2020.
+//  Created by Peter Molnar  on 26/08/2020.
 //  Copyright © 2020 Peter Molnar. All rights reserved.
 //
 
@@ -17,7 +17,7 @@ public final class FlightCell: UITableViewCell {
     static let cellIdentifier = "FlightCell"
     
     public func configure(with flight: Flight, currency: String, currPrecision: Int) {
-        self.outDate?.text = flight.time[0].dateTranslationTo()
+        self.outDate?.text = flight.time[0].responseDateTranslation()
         self.flightNumber?.text = flight.flightNumber
         self.regularFareSummed?.text = String(format: "%.\(currPrecision)f", flight.regularFare?.fares[0].amount ?? "N/A") + " " + currency
     }
